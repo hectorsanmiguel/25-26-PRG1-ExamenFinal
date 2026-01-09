@@ -16,8 +16,9 @@ public class ConversorUnidades {
 
             menuLongitud();
             int conversionElegida = scanner.nextInt();
+            final int NUMERO_MAXIMO_DE_OPCIONES = 6;
 
-            if (conversionElegida < 1 || conversionElegida > 6) {
+            if (conversionElegida < 1 || conversionElegida > NUMERO_MAXIMO_DE_OPCIONES) {
                 mensajeError();
                 validacion = false;
             } else {
@@ -44,8 +45,9 @@ public class ConversorUnidades {
 
             menuPeso();
             int conversionElegida = scanner.nextInt();
+            final int NUMERO_MAXIMO_DE_OPCIONES = 6;
 
-            if (conversionElegida < 1 || conversionElegida > 6) {
+            if (conversionElegida < 1 || conversionElegida > NUMERO_MAXIMO_DE_OPCIONES) {
                 mensajeError();
                 validacion = false;
             } else {
@@ -72,8 +74,9 @@ public class ConversorUnidades {
             
             menuTemperatura();
             int conversionElegida = scanner.nextInt();
+            final int NUMERO_MAXIMO_DE_OPCIONES = 4;
 
-            if (conversionElegida < 1 || conversionElegida > 6) {
+            if (conversionElegida < 1 || conversionElegida > NUMERO_MAXIMO_DE_OPCIONES) {
                 mensajeError();
                 validacion = false;
             } else {
