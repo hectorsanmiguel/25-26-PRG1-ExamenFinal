@@ -8,11 +8,8 @@ public class ConversorUnidades {
         Scanner scanner = new Scanner(System.in);
         boolean validacion = true;
 
-        System.out.println("Conversor de Unidades - Version 2.1");
-        System.out.println("[1] Longitud");
-        System.out.println("[2] Peso");
-        System.out.println("[3] Temperatura");
-        System.out.print("Tipo de conversion: ");
+        menu();
+        
         int opcionElegida = scanner.nextInt();
 
         if (opcionElegida == 1) {
@@ -120,4 +117,11 @@ public class ConversorUnidades {
         System.out.println("Opcion no valida");
     }
 
+    static void menu() {
+        System.out.println("Conversor de Unidades - Version 2.1");
+        System.out.println("[1] Longitud");
+        System.out.println("[2] Peso");
+        System.out.println("[3] Temperatura");
+        System.out.print("Tipo de conversion: ");
+    }
 }
