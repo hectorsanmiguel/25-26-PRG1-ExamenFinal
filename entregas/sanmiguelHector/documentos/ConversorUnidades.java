@@ -8,19 +8,13 @@ public class ConversorUnidades {
         Scanner scanner = new Scanner(System.in);
         boolean validacion = true;
 
-        menu();
-        
+        menuPrincipal();
+
         int opcionElegida = scanner.nextInt();
 
         if (opcionElegida == 1) {
-            System.out.println("Conversion de longitud:");
-            System.out.println("[1] Metros a Kilometros");
-            System.out.println("[2] Kilometros a Metros");
-            System.out.println("[3] Metros a Millas");
-            System.out.println("[4] Millas a Metros");
-            System.out.println("[5] Centimetros a Pulgadas");
-            System.out.println("[6] Pulgadas a Centimetros");
-            System.out.print("Opcion: ");
+
+            menuLongitud();
             int conversionElegida = scanner.nextInt();
 
             if (conversionElegida < 1 || conversionElegida > 6) {
@@ -47,14 +41,8 @@ public class ConversorUnidades {
                 }
             }
         } else if (opcionElegida == 2) {
-            System.out.println("Conversion de peso:");
-            System.out.println("[1] Kilogramos a Gramos");
-            System.out.println("[2] Gramos a Kilogramos");
-            System.out.println("[3] Kilogramos a Libras");
-            System.out.println("[4] Libras a Kilogramos");
-            System.out.println("[5] Gramos a Onzas");
-            System.out.println("[6] Onzas a Gramos");
-            System.out.print("Opcion: ");
+
+            menuPeso();
             int conversionElegida = scanner.nextInt();
 
             if (conversionElegida < 1 || conversionElegida > 6) {
@@ -81,12 +69,8 @@ public class ConversorUnidades {
                 }
             }
         } else if (opcionElegida == 3) {
-            System.out.println("Conversion de temperatura:");
-            System.out.println("[1] Celsius a Fahrenheit");
-            System.out.println("[2] Fahrenheit a Celsius");
-            System.out.println("[3] Celsius a Kelvin");
-            System.out.println("[4] Kelvin a Celsius");
-            System.out.print("Opcion: ");
+            
+            menuTemperatura();
             int conversionElegida = scanner.nextInt();
 
             if (conversionElegida < 1 || conversionElegida > 6) {
@@ -117,11 +101,42 @@ public class ConversorUnidades {
         System.out.println("Opcion no valida");
     }
 
-    static void menu() {
+    static void menuPrincipal() {
         System.out.println("Conversor de Unidades - Version 2.1");
         System.out.println("[1] Longitud");
         System.out.println("[2] Peso");
         System.out.println("[3] Temperatura");
         System.out.print("Tipo de conversion: ");
     }
-}
+
+    static void menuLongitud() {
+        System.out.println("Conversion de longitud:");
+        System.out.println("[1] Metros a Kilometros");
+        System.out.println("[2] Kilometros a Metros");
+        System.out.println("[3] Metros a Millas");
+        System.out.println("[4] Millas a Metros");
+        System.out.println("[5] Centimetros a Pulgadas");
+        System.out.println("[6] Pulgadas a Centimetros");
+        System.out.print("Opcion: ");
+    }
+
+    static void menuPeso() {
+        System.out.println("Conversion de peso:");
+        System.out.println("[1] Kilogramos a Gramos");
+        System.out.println("[2] Gramos a Kilogramos");
+        System.out.println("[3] Kilogramos a Libras");
+        System.out.println("[4] Libras a Kilogramos");
+        System.out.println("[5] Gramos a Onzas");
+        System.out.println("[6] Onzas a Gramos");
+        System.out.print("Opcion: ");
+    }
+
+    static void menuTemperatura() {
+        System.out.println("Conversion de temperatura:");
+        System.out.println("[1] Celsius a Fahrenheit");
+        System.out.println("[2] Fahrenheit a Celsius");
+        System.out.println("[3] Celsius a Kelvin");
+        System.out.println("[4] Kelvin a Celsius");
+        System.out.print("Opcion: ");
+    }
+ }
