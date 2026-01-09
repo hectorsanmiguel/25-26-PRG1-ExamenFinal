@@ -20,12 +20,12 @@ public class ConversorUnidades {
 
             if (conversionElegida < 1 || conversionElegida > NUMERO_MAXIMO_DE_OPCIONES) {
                 mensajeError();
-                validacion = false;
+
             } else {
                 System.out.print("Valor: ");
                 double valorDelUsuario = scanner.nextDouble();
 
-                if (conversionElegida == 1 && validacion) {
+                if (conversionElegida == 1) {
                     System.out.println(valorDelUsuario + " m = " + (valorDelUsuario / 1000) + " km");
                 } else if (conversionElegida == 2) {
                     System.out.println(valorDelUsuario + " km = " + (valorDelUsuario * 1000) + " m");
@@ -49,7 +49,7 @@ public class ConversorUnidades {
 
             if (conversionElegida < 1 || conversionElegida > NUMERO_MAXIMO_DE_OPCIONES) {
                 mensajeError();
-                validacion = false;
+
             } else {
                 System.out.print("Valor: ");
                 double valorDelUsuario = scanner.nextDouble();
@@ -78,7 +78,7 @@ public class ConversorUnidades {
 
             if (conversionElegida < 1 || conversionElegida > NUMERO_MAXIMO_DE_OPCIONES) {
                 mensajeError();
-                validacion = false;
+
             } else {
                 System.out.print("Valor: ");
                 double valorDelUsuario = scanner.nextDouble();
