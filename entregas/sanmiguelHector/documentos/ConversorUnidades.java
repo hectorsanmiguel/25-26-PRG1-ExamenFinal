@@ -1,10 +1,12 @@
 package entregas.sanmiguelHector.documentos;
+
 import java.util.Scanner;
 
 public class ConversorUnidades {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean f = true;
+        boolean validacion = true;
 
         System.out.println("Conversor de Unidades - Version 2.1");
         System.out.println("[1] Longitud");
@@ -23,24 +25,29 @@ public class ConversorUnidades {
             System.out.println("[6] Pulgadas a Centimetros");
             System.out.print("Opcion: ");
             int conversionElegida = scanner.nextInt();
-            System.out.print("Valor: ");
-            double valorDelUsuario = scanner.nextDouble();
 
-            if (conversionElegida == 1) {
-                System.out.println(valorDelUsuario + " m = " + (valorDelUsuario / 1000) + " km");
-            } else if (conversionElegida == 2) {
-                System.out.println(valorDelUsuario + " km = " + (valorDelUsuario * 1000) + " m");
-            } else if (conversionElegida == 3) {
-                System.out.println(valorDelUsuario + " m = " + (valorDelUsuario * 0.000621371) + " mi");
-            } else if (conversionElegida == 4) {
-                System.out.println(valorDelUsuario + " mi = " + (valorDelUsuario * 1609.34) + " m");
-            } else if (conversionElegida == 5) {
-                System.out.println(valorDelUsuario + " cm = " + (valorDelUsuario * 0.393701) + " in");
-            } else if (conversionElegida == 6) {
-                System.out.println(valorDelUsuario + " in = " + (valorDelUsuario * 2.54) + " cm");
+            if (conversionElegida < 1 || conversionElegida > 6) {
+                mensajeError();
+                validacion = false;
             } else {
-                System.out.println("Opcion no valida");
-                f = false;
+                System.out.print("Valor: ");
+                double valorDelUsuario = scanner.nextDouble();
+
+                if (conversionElegida == 1 && validacion) {
+                    System.out.println(valorDelUsuario + " m = " + (valorDelUsuario / 1000) + " km");
+                } else if (conversionElegida == 2) {
+                    System.out.println(valorDelUsuario + " km = " + (valorDelUsuario * 1000) + " m");
+                } else if (conversionElegida == 3) {
+                    System.out.println(valorDelUsuario + " m = " + (valorDelUsuario * 0.000621371) + " mi");
+                } else if (conversionElegida == 4) {
+                    System.out.println(valorDelUsuario + " mi = " + (valorDelUsuario * 1609.34) + " m");
+                } else if (conversionElegida == 5) {
+                    System.out.println(valorDelUsuario + " cm = " + (valorDelUsuario * 0.393701) + " in");
+                } else if (conversionElegida == 6) {
+                    System.out.println(valorDelUsuario + " in = " + (valorDelUsuario * 2.54) + " cm");
+                } else {
+                    mensajeError();
+                }
             }
         } else if (opcionElegida == 2) {
             System.out.println("Conversion de peso:");
@@ -52,24 +59,29 @@ public class ConversorUnidades {
             System.out.println("[6] Onzas a Gramos");
             System.out.print("Opcion: ");
             int conversionElegida = scanner.nextInt();
-            System.out.print("Valor: ");
-            double valorDelUsuario = scanner.nextDouble();
 
-            if (conversionElegida == 1) {
-                System.out.println(valorDelUsuario + " kg = " + (valorDelUsuario * 1000) + " g");
-            } else if (conversionElegida == 2) {
-                System.out.println(valorDelUsuario + " g = " + (valorDelUsuario / 1000) + " kg");
-            } else if (conversionElegida == 3) {
-                System.out.println(valorDelUsuario + " kg = " + (valorDelUsuario * 2.20462) + " lb");
-            } else if (conversionElegida == 4) {
-                System.out.println(valorDelUsuario + " lb = " + (valorDelUsuario * 0.453592) + " kg");
-            } else if (conversionElegida == 5) {
-                System.out.println(valorDelUsuario + " g = " + (valorDelUsuario * 0.035274) + " oz");
-            } else if (conversionElegida == 6) {
-                System.out.println(valorDelUsuario + " oz = " + (valorDelUsuario * 28.3495) + " g");
+            if (conversionElegida < 1 || conversionElegida > 6) {
+                mensajeError();
+                validacion = false;
             } else {
-                System.out.println("Opcion no valida");
-                f = false;
+                System.out.print("Valor: ");
+                double valorDelUsuario = scanner.nextDouble();
+
+                if (conversionElegida == 1) {
+                    System.out.println(valorDelUsuario + " kg = " + (valorDelUsuario * 1000) + " g");
+                } else if (conversionElegida == 2) {
+                    System.out.println(valorDelUsuario + " g = " + (valorDelUsuario / 1000) + " kg");
+                } else if (conversionElegida == 3) {
+                    System.out.println(valorDelUsuario + " kg = " + (valorDelUsuario * 2.20462) + " lb");
+                } else if (conversionElegida == 4) {
+                    System.out.println(valorDelUsuario + " lb = " + (valorDelUsuario * 0.453592) + " kg");
+                } else if (conversionElegida == 5) {
+                    System.out.println(valorDelUsuario + " g = " + (valorDelUsuario * 0.035274) + " oz");
+                } else if (conversionElegida == 6) {
+                    System.out.println(valorDelUsuario + " oz = " + (valorDelUsuario * 28.3495) + " g");
+                } else {
+                    mensajeError();
+                }
             }
         } else if (opcionElegida == 3) {
             System.out.println("Conversion de temperatura:");
@@ -79,24 +91,33 @@ public class ConversorUnidades {
             System.out.println("[4] Kelvin a Celsius");
             System.out.print("Opcion: ");
             int conversionElegida = scanner.nextInt();
-            System.out.print("Valor: ");
-            double valorDelUsuario = scanner.nextDouble();
 
-            if (conversionElegida == 1) {
-                System.out.println(valorDelUsuario + " C = " + (valorDelUsuario * 9 / 5 + 32) + " F");
-            } else if (conversionElegida == 2) {
-                System.out.println(valorDelUsuario + " F = " + ((valorDelUsuario - 32) * 5 / 9) + " C");
-            } else if (conversionElegida == 3) {
-                System.out.println(valorDelUsuario + " C = " + (valorDelUsuario + 273.15) + " K");
-            } else if (conversionElegida == 4) {
-                System.out.println(valorDelUsuario + " K = " + (valorDelUsuario - 273.15) + " C");
+            if (conversionElegida < 1 || conversionElegida > 6) {
+                mensajeError();
+                validacion = false;
             } else {
-                System.out.println("Opcion no valida");
-                f = false;
+                System.out.print("Valor: ");
+                double valorDelUsuario = scanner.nextDouble();
+
+                if (conversionElegida == 1) {
+                    System.out.println(valorDelUsuario + " C = " + (valorDelUsuario * 9 / 5 + 32) + " F");
+                } else if (conversionElegida == 2) {
+                    System.out.println(valorDelUsuario + " F = " + ((valorDelUsuario - 32) * 5 / 9) + " C");
+                } else if (conversionElegida == 3) {
+                    System.out.println(valorDelUsuario + " C = " + (valorDelUsuario + 273.15) + " K");
+                } else if (conversionElegida == 4) {
+                    System.out.println(valorDelUsuario + " K = " + (valorDelUsuario - 273.15) + " C");
+                } else {
+                    mensajeError();
+                }
             }
         } else {
-            System.out.println("Tipo no valido");
+            mensajeError();
         }
+    }
+
+    static void mensajeError() {
+        System.out.println("Opcion no valida");
     }
 
 }
